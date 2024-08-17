@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login/register</title>
+    <link rel="stylesheet" href="css/log.css">
+ 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+<div class="container" id="main">
+    <div class="sign-up">
+        <form method="post" action="register.php">
+            <h1>Create Account</h1>
+     
+            <p>or use your email for register</p>
+            
+        <form action="/submit_registration" method="post">
+            
+                <label for="full-name">Full Name</label>
+                <input type="text" id="full-name" name="full_name" required>
+                               
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            
+                <label for="mobile">Mobile</label>
+                <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required>
+           
+                    
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                                              
+            <button>Sign Up</button>
+        </form>
+    </div>
+    <div class="sign-in">
+        <form method="post" action="#">
+            <h1>Sign in</h1>
+            <div class="social-container">
+                <a href="#" class="social"><i class='bx bxl-facebook'></i></a>
+                <a href="#" class="social"><i class='bx bxl-google-plus'></i></a>
+                <a href="#" class="social"><i class='bx bxl-linkedin'></i></a>
+            </div>
+            <p>or use your Account</p>
+            <input type="email" name="email" placeholder="Email" required="">
+            <input type="password" name="pswd" placeholder="Password" required="">
+            <a href="#">If you don't have an account,click the SIGN UP Button</a>
+            <button>Sign in</button>
+        </form>
+    </div>
+    <div class="overlay-container">
+        <div class="overlay">
+            <div class="overlay-left">
+                <h1>Welcome Back!</h1>
+                <p>To keep connected with us please login with your personal info</p>
+                <button id="signIn">Sign In</button>
+            </div>
+            <div class="overlay-right">
+                <h1>Hello, Friend</h1>
+                <p>Enter your personal details and start journey with us</p>
+                <button id="signUp">Sign Up</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    const signUpButton = document.getElementById('signUp');
+    const signInButton = document.getElementById('signIn');
+    const main = document.getElementById('main');
+    signUpButton.addEventListener('click', () => {
+        main.classList.add("right-panel-active");
+    });
+    signInButton.addEventListener('click', () => {
+        main.classList.remove("right-panel-active");
+    });
+</script>
+</body>
+</html>
