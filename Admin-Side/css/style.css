@@ -59,6 +59,7 @@ body a:hover{
     list-style-type: none;
     padding-left: 0;
 }
+
 /*LEFT NAVIGATION ICON*/
 .dcjq-icon {
     height:17px;
@@ -3144,4 +3145,42 @@ div#graph1, div#graph4, div#graph5, div#graph6, div#graph7, div#graph8, div#grap
 .chart_agile_bottom {
     padding: 0;
 }
+}
+.button1
+{
+    color: #ffffff;
+    background-color: rgb(53, 53, 144);
+    border-color: rgb(53, 53, 144);
+    height: 30px;
+    width: 90px;
+    border-radius: 10px;
+}
+.button2
+{
+    color: #ffffff;
+    background-color: rgb(250, 0, 0);
+    border-color: rgb(250, 0, 0);
+    height: 30px;
+    width: 90px;
+    border-radius: 10px;
+}
+.button3
+{
+    color: #ffffff;
+    background-color: rgb(53, 144, 59);
+    border-color: rgb(53, 144, 59);
+    height: 30px;
+    width: 90px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+.form-button
+{
+    color: #ffffff;
+    background-color: rgb(63, 225, 74);
+    border-color: rgb(63, 225, 74);
+    height: 30px;
+    width: 30%;
+    border-radius: 10px;
 }
