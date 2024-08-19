@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - www.codingnepalweb.com -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card Slider HTML and CSS | CodingNepal</title>
+  <!-- Linking SwiperJS CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./asset/style.css">
+</head>
+<body>
+  <div class="container swiper">
+    <div class="slider-wrapper">
+      <div class="card-list swiper-wrapper">
+        <div class="card-item swiper-slide">
+          <img src="images/img-1.jpg" class="user-image">
+          <h2 class="user-name">Admin</h2>
+          <p class="user-profession"></p>
+          <a href="./Admin-Side/login.html"><input type="submit" value="Login" class="message-button"></a>
+        </div>
+
+        <div class="card-item swiper-slide">
+          <h2 class="user-name">Welcome</h2>
+          <p class="user-profession">Login</p>
+        </div>
+
+        
+
+        <div class="card-item swiper-slide">
+            <img src="images/img" class="user-image">
+            <h2 class="user-name">User</h2>
+            <p class="user-profession"></p>
+            <a href="./User-Side/login.html"><input type="submit" value="Login" class="message-button"></a>
+        </div>
+      </div>
+
+      <div class="swiper-pagination"></div>
+      <div class="swiper-slide-button swiper-button-prev"></div>
+      <div class="swiper-slide-button swiper-button-next"></div>
+    </div>
+  </div>
+
+  <!-- Linking SwiperJS script -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Linking custom script -->
+  <script src="./asset/script.js"></script>
+</body>
+</html>
