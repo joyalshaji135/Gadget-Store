@@ -1,181 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>BeatX</title>
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/global.css" rel="stylesheet">
-	<link href="css/checkout.css" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
-	<link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
-	<script src="js/jquery-2.1.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-  </head>
-  
-<body>
-<section id="top">
- <div class="container">
-  <div class="row">
-   <div class="top_1 clearfix">
-    <div class="col-sm-3">
-	 <div class="top_1l clearfix">
-	  <p class="mgt small">Welcome to our store!</p>
-	 </div>
-	</div>
-	<div class="col-sm-9">
-	 <div class="top_1r clearfix">
-		<ul class="nav navbar-nav nav_1 mgt navbar-right">
-			
-			<li class="dropdown bord_l">
-					  <a class="font_tag border_none" href="#" data-toggle="dropdown" role="button" aria-expanded="false">Setting<span class="caret"></span></a>
-					  <ul class="dropdown-menu drop_1" role="menu">
-						<li><a href="#">Checkout</a></li>
-						<li><a href="./login_redirection.html">Login</a></li>
-						<li><a href="./registration.php">Registration</a></li>
-					  </ul>
-					</li>
-			<li class="dropdown bord_l">
-					  <a class="font_tag border_none" href="#" data-toggle="dropdown" role="button" aria-expanded="false">English<span class="caret"></span></a>
-					  <ul class="dropdown-menu drop_1" role="menu">
-						<li><a href="index.html"><i class="fa fa-flag"></i> English</a></li>
-					  </ul>
-					</li>
-		</ul>
-	 </div>
-	</div>
-   </div>
-  </div>
- </div>
-</section>
 
-<section id="header">
- <div class="container">
-  <div class="row">
-   <div class="header_1 clearfix">
-    <div class="col-sm-3">
-	 <div class="header_1l clearfix">
-	  <h2 class="mgt"><a href="index.html"><i class="fa fa-headphones"></i> <span class="col_1">BeatX</span> Kart</a></h2>
-	 </div>
-	</div>
-	<div class="col-sm-6">
-	 <div class="header_1m clearfix">
-	  <div class="input-group">
-					<input type="text" class="form-control" placeholder="Search">
-					<span class="input-group-btn">
-						<button class="btn btn-primary" type="button">
-							<i class="fa fa-search"></i></button>
-					</span>
-				 </div>
-	 </div>
-	</div>
-	<div class="header_1r clearfix">
-	  <ul class="nav navbar-nav mgt navbar-right">
-				<li class="dropdown">
-					  <a class="tag_m1" href="#" data-toggle="dropdown" role="button" aria-expanded="false"><i class="glyphicon glyphicon-shopping-cart"></i></a>
-					  <ul class="dropdown-menu drop_1" role="menu">
-						<li>
-						 <div class="drop_1i clearfix">
-						  <div class="col-sm-6">
-						   <div class="drop_1il clearfix"><h5 class="mgt">2 ITEMS</h5></div>
-						  </div>
-						  <div class="col-sm-6">
-						   <div class="drop_1il text-right clearfix"><h5 class="mgt"><a href="#">VIEW CART</a></h5></div>
-						  </div>
-						 </div>
-						 <div class="drop_1i1 clearfix">
-						  <div class="col-sm-8">
-						   <div class="drop_1i1l clearfix"><h6 class="mgt bold"><a href="#">Nulla Quis</a> <br> <span class="normal col_2">1x -<i class="fa fa-rupee"></i> 89.00</span> <br> <span><i class="fa fa-remove"></i></span></h6></div>
-						  </div>
-						  <div class="col-sm-4">
-						   <div class="drop_1i1r text-right clearfix"><a href="#"><img src="img/1.jpg" class="iw" alt="abc"></a></div>
-						  </div>
-						 </div>
-						 <div class="drop_1i1 clearfix">
-						  <div class="col-sm-8">
-						   <div class="drop_1i1l clearfix"><h6 class="mgt bold"><a href="#">Eget Nulla</a> <br> <span class="normal col_2">1x -<i class="fa fa-rupee"></i> 49.00</span> <br> <span><i class="fa fa-remove"></i></span></h6></div>
-						  </div>
-						  <div class="col-sm-4">
-						   <div class="drop_1i1r text-right clearfix"><a href="#"><img src="img/2.png" class="iw" alt="abc"></a></div>
-						  </div>
-						 </div>
-						 <div class="drop_1i2 clearfix">
-						  <div class="col-sm-6">
-						   <div class="drop_1il clearfix"><h5 class="mgt">TOTAL</h5></div>
-						  </div>
-						  <div class="col-sm-6">
-						   <div class="drop_1il text-right clearfix"><h5 class="mgt"> <i class="fa fa-rupee"></i> 138.00</h5></div>
-						  </div>
-						 </div> 
-						 <div class="drop_1i3 text-center clearfix">
-						  <div class="col-sm-12">
-						   <h5><a class="button_1 block" href="#">CHECKOUT</a></h5>
-						   <h5><a class="button block" href="#">VIEW CART</a></h5>
-						  </div>
-						 </div>
-						</li>
-					  </ul>
-                    </li>
-			    </ul>
-	 </div>
-   </div>
-  </div>
- </div>
-</section>
+<?php
 
-<section id="menu" class="clearfix cd-secondary-nav">
-	<nav class="navbar nav_t">
-		<div class="container">
-		    <div class="navbar-header page-scroll">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="index.html"><i class="fa fa-headphones"></i> <span class="col_1">Beat</span> Store</a>
-			</div>
-			<!-- Brand and toggle get grouped for better mobile display -->
-			<!-- Collect the nav links, forms, and other content for toggling -->
-			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				<ul class="nav navbar-nav">
-				
-				<li><a class="m_tag" href="index.html">Home</a></li>
-				<li class="dropdown">
-					  
-                    </li>
-				<li class="dropdown">
-					  
-                    </li>
-				
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>			
-	
-	</nav>
-	</section>
-	
-<section id="center" class="clearfix center_shop">
-<div class="container">
- <div class="row">
-   <div class="center_shop_1 clearfix">
-    <div class="col-sm-6">
-	 <div class="center_shop_1l clearfix">
-	  <h3 class="mgt">Login</h3>
-	 </div>
-	</div>
-	<div class="col-sm-6">
-	 <div class="center_shop_1r text-right clearfix">
-	  <h5><a class="col_2" href="#">Home</a> / <span>Login</span></h5>
-	 </div>
-	</div>
-   </div>
- </div>
-</div>
-</section>
+include('./database/config.php');
+
+
+include('./Layout/login/header.php');
+
+
+?>
 
 <section id="checkout" class="clearfix">
  <div class="container">
@@ -189,16 +21,16 @@
 	  <div class="checkout_1l1 clearfix">
        <div class="col-sm-12 space_left">
 	    <h5>Username <span class="col_1">*</span></h5>
-		<input class="form-control" type="text">
+		<input class="form-control" type="text" name="username">
 	   </div>
 	   <div class="col-sm-12 space_left">
 	    <h5>Password <span class="col_1">*</span></h5>
-		<input class="form-control" type="text">
+		<input class="form-control" type="text" name="user_password">
 	   </div>
 	  </div>
 	  <div class="checkout_1l clearfix">
 		<p>Don’t have an account?
-		 <a href="./registration.html"><small>Sign up here</small></a></p>
+		 <a href="./registration.php"><small>Sign up here</small></a></p>
 	   </div> 
       <div class="checkout_1l1 clearfix">
         <div class="col-sm-12 space_left">
@@ -211,80 +43,56 @@
  </div>
 </section>
 <br><br>
-<section id="footer" class="clearfix">
- <div class="container">
-  <div class="row">
-   <div class="footer_1 clearfix">
-    <div class="col-sm-3">
-	 <div class="footer_1l clearfix">
-	   <h2 class="mgt"><a href="#"><span class="col_1">BeatX</span> kart</a></h2>
-	   <p>WWe are a team of designers and developers that create high qualityearbuds, headphones, other audio products...</p>
-	   <div class="footer_1li cleafix">
-	    <span class="col_1"><i class="fa fa-phone"></i></span>
-		<h5>Customer Support</h5>
-		<h4><a href="#">(+91) 123 456 789</a></h4>
-	   </div>
-	 </div>
-	</div>
-	<div class="col-sm-5">
-	 <div class="footer_1m clearfix">
-	  <h4>Subscribe Newsletter To Get Updated</h4><br>
-	  <div class="header_1m clearfix">
-	  <div class="input-group">
-					<input type="text" class="form-control" placeholder="Search">
-					<span class="input-group-btn">
-						<button class="btn btn-primary" type="button">
-							Subscribe</button>
-					</span>
-				 </div>
-	 </div>
-	  <p>We are a team of designers and developers that create high qualityearbuds, headphones, other audio products...</p>
-      <ul class="social-network social-circle">
-                        <li><a href="#" class="icoRss" title="Rss"><i class="fa fa-rss"></i></a></li>
-                        <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
-                        <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
-                    </ul>
-	 </div>
-	</div>
-	<div class="col-sm-4">
-	 <div class="footer_1r clearfix">
-	  <h4>Information</h4>
-	  <ul>
-	   <li><a href="#">Delivery <span class="pull-right">Legal Notice</span></a></li>
-	   <li><a href="#">About Us <span class="pull-right">Secure payment</span></a></li>
-	   <li><a href="#">Contact Us <span class="pull-right">Sitemap</span></a></li>
-	   <li><a href="#">Stores <span class="pull-right">My Account</span></a></li>
-	  </ul>
-	 </div>
-	</div>
-   </div>
-   <div class="footer_2 text-center clearfix">
-    <div class="col-sm-12">
-	 <p class="mgt">© 2013 Your BeatX Kart. All Rights Reserved | Design by AB Products. <a class="col_1" href="http://www.templateonweb.com">AB Products</a></p>
-	</div>
-   </div>
-  </div>
- </div>
-</section>
 
-<script>
-$(document).ready(function(){
-	/*****Fixed Menu******/
-	var secondaryNav = $('.cd-secondary-nav'),
-	   secondaryNavTopPosition = secondaryNav.offset().top;
-		$(window).on('scroll', function(){
-			if($(window).scrollTop() > secondaryNavTopPosition ) {
-				secondaryNav.addClass('is-fixed');	
-			} else {
-				secondaryNav.removeClass('is-fixed');
-			}
-		});	
-		
-});
-</script>
+<?php
 
-</body>
- 
-</html>
+include('./Layout/login/footer.php');
+
+?>
+
+<?php
+if(isset($_POST['user_login']))
+{
+	$username=$_POST['username'];
+	$user_password=$_POST['user_password'];
+	//Select User Query
+	$select_query="Select * from user_login_tbl where username='$username'";
+	$result_query=mysqli_query($connection,$select_query);
+	$user_row=mysqli_num_rows($result_query);
+	$row_data=mysqli_fetch_assoc($result_query);
+
+	// $select_cart_query="Select * from add_to_cart_tbl where ip_address='$user_ip_address'"; //cart TABLE NAME IS cart_detail
+	// $result_cart=mysqli_query($con,$select_cart_query);
+	// $row_cart_count=mysqli_num_rows($result_cart);
+
+	if($user_row>0)
+	{
+		$_SESSION['username']=$username;
+		if(password_verify($user_password,$row_data['user_password']))
+		{
+		       echo "<script>alert('Login SuccessFully')</script>"; 
+			   echo "<script>window.open('index.php','_self')</script>";
+			// if($user_row==1 and $row_cart_count==0)
+			// {
+			// 	$_SESSION['username']=$username;
+			// 	echo "<script>alert('Login SuccessFully')</script>";
+			// 	echo "<script>window.open('profile.php','_self')</script>";
+			// }
+			// else
+			// { 
+			// 	$_SESSION['username']=$username;
+			// 	echo "<script>alert('Login SuccessFully')</script>";
+			// 	echo "<script>window.open('payment_method.php','_self')</script>";
+			// }
+
+		}else
+		{
+			echo "<script>alert('Invalid Credantial')</script>";
+		}
+	}
+	else
+	{
+		echo "<script>alert('Invalid Credantial')</script>";
+	}
+}
+?>

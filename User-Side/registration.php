@@ -3,9 +3,13 @@
 include('./database/config.php');
 
 
-include('./Layouts/basic/header.php');
+include('./Layout/registration/header.php');
 
-?>
+session_start();
+
+?> 
+
+
 
 <section id="checkout" class="clearfix">
  <div class="container">
@@ -16,6 +20,7 @@ include('./Layouts/basic/header.php');
 	   <h3 class="mgt"></h3>
 	   <p></p>
 	  </div><br>
+	  <form action="" method="post">
 	  <div class="checkout_1l1 clearfix">
        <div class="col-sm-6 space_left">
 	    <h5>Username <span class="col_1">*</span></h5>
@@ -50,21 +55,21 @@ include('./Layouts/basic/header.php');
        <div class="col-sm-6 space_left">
 	    <h5>Country <span class="col_1">*</span></h5>
 		<select class="form-control" name="user_country">
-				 <option>India</option>
-				 <option>Paksitan</option>
-				 <option>Russia</option>
-				 <option>England</option>
-				 <option>Nepal</option>
+				 <option value="india">India</option>
+				 <option value="pakistan">Paksitan</option>
+				 <option value="russia">Russia</option>
+				 <option value="england">England</option>
+				 <option value="nepal">Nepal</option>
 			 </select>
 	   </div>
 	   <div class="col-sm-6 space_left">
 	    <h5>State / Divition <span class="col_1">*</span></h5>
 		<select class="form-control" name="user_state">
-				 <option>UP</option>
-				 <option>MP</option>
-				 <option>Bihar</option>
-				 <option>Delhi</option>
-				 <option>Jharkhand</option>
+				 <option value="up">UP</option>
+				 <option value="mp">MP</option>
+				 <option value="bihar">Bihar</option>
+				 <option value="delhi">Delhi</option>
+				 <option value="jharkhand">Jharkhand</option>
 			 </select>
 	   </div>
 	  </div>
@@ -94,6 +99,7 @@ include('./Layouts/basic/header.php');
         </div>
        </div>
 	</div>
+	</form>
    </div>
   </div>
  </div>
@@ -102,9 +108,10 @@ include('./Layouts/basic/header.php');
 
 <?php
 
-include('./Layouts/basic/footer.php');
+include('./Layout/registration/footer.php');
 
 ?>
+
 
 
 
@@ -147,7 +154,7 @@ if (isset($_POST['user_register'])) {
 	{
 		$insert_query = "insert into `user_registration_tbl` 
                     (username,full_name,user_email,user_phone_number,user_country,user_state,user_address_1,user_address_2,user_postal_code,user_password,user_status) 
-                    values ('$username','$full_name','$user_email','$user_phone_number','$user_country','$user_state','$user_address_1','$user_address_2','$user_postal_code',$hash_password,'$user_status')";
+                    values ('$username','$full_name','$user_email','$user_phone_number','$user_country','$user_state','$user_address_1','$user_address_2','$user_postal_code','$hash_password','$user_status')";
 		$sql_execute = mysqli_query($connection, $insert_query);
 		$insert_login_query = "insert into `user_login_tbl` 
                     (username,password) values ('$username','$hash_password')";
