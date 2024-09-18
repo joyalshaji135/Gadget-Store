@@ -1,5 +1,11 @@
 <?php
 
+include('./database/config.php');
+
+?>
+
+<?php
+
 include('./Layout/header.php');
 
 ?>
@@ -21,17 +27,29 @@ include('./Layout/header.php');
                             </div>
                             <div class="panel-body">
                                 <div class="row">
-                                    <form action="" method="post">
+                                    <form action="" method="post" enctype="multipart/form-data">
                                         <div class="col-lg-3"></div>
                                         
                                         <div class="col-lg-6">
 
 
-                                        <select class="form-control m-bot15" name="programme_id" style="text-align: center;">
+                                        <select class="form-control m-bot15" name="category_id" style="text-align: center;">
                                             <option selected disabled>Option Select</option>
-                                            <option value='$course_id'>S22 Ultra</option>
-                                            <option value='$course_id'>S22 Ultra</option>
-                                            <option value='$course_id'>S22 Ultra</option>
+                                            
+                                                     <!--PHP Connection Start in Category-->
+                                                     <!-- Function Category -->
+                                                 <?php
+                                                 $select_category_query = "select * from category_tbl";
+                                                 $select_category_execute = mysqli_query($connection,$select_category_query);
+                                                 while($category_row=mysqli_fetch_assoc($select_category_execute))
+                                                 {
+                                                     $category_name=$category_row['category_name'];
+                                                     $category_id=$category_row['category_id'];
+                                                    echo "<option value='$category_id'>$category_name</option>";
+                                                 }
+                                                 ?>  
+                                                 <!--PHP Connection End in Category-->
+                                                 
                                         </select>
 
 
@@ -40,21 +58,24 @@ include('./Layout/header.php');
                                         <br><br><br>
                                         <div class="col-lg-3"></div>
                                         <div class="col-lg-6">
-                                            <input type="text" class="form-control" id="exampleInputEmail2" placeholder="Enter Course" name="course_name">
+                                            <input type="text" class="form-control" id="" placeholder="Enter Sub Category" name="sub_category_name">
                                         </div>
                                         <div class="col-lg-3"></div>
                                         <br><br><br>
                                         <div class="col-lg-3"></div>
                                         <div class="col-lg-6">
-                                            <input type="file" class="form-control" id="exampleInputEmail2" placeholder="Enter Course" name="course_name">
+                                            <input type="file" class="form-control" id="sub_category_image" placeholder="Enter Sub Category" name="sub_category_image">
                                         </div>
                                         <div class="col-lg-3"></div>
                                         
-                                        <div class="col-lg-5"></div>
+                                        <div class="col-lg-3"></div>
                                         <div class="col-lg-6 form-group">
                                             <br>
-                                            <input type="submit" placeholder=".col-md-3" class="form-button" value="Submit" name="course_submit">
+                                            <center>
+                                            <input type="submit" value="Submit" class="btn btn-info" name="sub_category_submit">
+                                            </center>
                                         </div>
+                                        <div class="col-lg-3"></div>
                                     </form>
                                 </div>
                     </section>
@@ -78,61 +99,41 @@ include('./Layout/footer.php');
 
 <?php
 
+if(isset($_POST['sub_category_submit']))
+{
+    $sub_category_name = $_POST['sub_category_name'];
+    $category_id = $_POST['category_id'];
+    $sub_category_status = 'active';
+    $sub_category_image = $_FILES['sub_category_image']['name'];
+    $temp_image = $_FILES['sub_category_image']['tmp_name'];
+
+    if ($sub_category_name == '' or $sub_category_image == '' or $category_id == '') 
+        {
+            echo "<script>alert('Please Fill the Blank Spaces')</script>";
+            exit;
+        } 
+        else 
+        {
+            move_uploaded_file($temp_image, "./Sub_Category_Image/$sub_category_image");
+
+            $insert_sub_category_query="insert into sub_category_tbl (category_id,sub_category_name,sub_category_image,sub_category_status) values ('$category_id','$sub_category_name','$sub_category_image','$sub_category_status')";
+            $sub_category_execute_query=mysqli_query($connection,$insert_sub_category_query);
+            if($sub_category_execute_query)
+            {
+              echo "<script>alert('Category inserted Successfully')</script>";
+              echo "<script>window.open('add_subcategory.php','_self')</script>";
+            }
+            else
+            {
+                die(mysqli_error($connection));
+            }
+        }
+}
 
 
 
 
-// if(isset($_POST['insert_product']))
-//   {
-//         $product_name=$_POST['product_name'];
-//         $product_discription=$_POST['product_discription'];
-//         $product_keyword=$_POST['product_keyword'];
-//         $product_category=$_POST['product_category'];
-//         $product_sub_category=$_POST['product_sub_category'];
-//         $product_offer=$_POST['product_offer'];
-//         $product_stock=$_POST['stock'];
-//         $product_actual_price=$_POST['product_actual_price'];
-//         $product_current_price=$_POST['product_current_price'];
-//         $product_status='true';
 
-//         //Image Accessing 
-
-//         $product_image=$_FILES['product_image']['name'];
-        
-
-//         //Image Accessing for tmp Image
-        
-//         $temp_image=$_FILES['product_image']['tmp_name'];
-
-//         //Check Empty Conditions
-
-//         if($product_name=='' or $product_discription=='' or $product_keyword=='' or $product_category=='' 
-//         or $product_sub_category=='' or $product_actual_price=='' or $product_stock=='' or
-//         $product_current_price=='' or $product_image=='' or $product_offer=='')
-//         {
-//               echo "<script>alert('Please Fill the Blank Spaces')</script>";
-//               exit;
-//         }else
-//         {
-//             move_uploaded_file($temp_image,"./Product_Image/$product_image"); 
-           
-//             //Insert Query
-
-//             $insert_product="insert into product_tbl (product_name,product_description,product_keyword,
-//             category_id,sub_category_id,product_image,product_stock,product_offer,product_actual_price,product_current_price,
-//             date,status) values ('$product_name','$product_discription','$product_keyword',
-//             '$product_category','$product_sub_category','$product_image','$product_stock','$product_offer','$product_actual_price',
-//             '$product_current_price',NOW(),'$product_status')";
-            
-//             $result_query=mysqli_query($con,$insert_product);
-
-//             if($result_query){
-//                 echo "<script>alert('Successfully Inserted the Products')</script>";
-//             }
-
-
-//         }
-//     }
 
 ?>
 
