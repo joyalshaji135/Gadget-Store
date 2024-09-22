@@ -1,3 +1,2 @@
-
 # Gadget Shop
 
